@@ -1,0 +1,20 @@
+* = always. It is a wildcard for every part of the cron schedule expression.
+
+So * * * * * means every minute of every hour of every day of every month and every day of the week.
+
+ * * * * *  command to execute
+ ┬ ┬ ┬ ┬ ┬
+ │ │ │ │ │
+ │ │ │ │ │
+ │ │ │ │ └───── day of week (0 - 7) (0 to 6 are Sunday to Saturday, or use names; 7 is Sunday, the same as 0)
+ │ │ │ └────────── month (1 - 12)
+ │ │ └─────────────── day of month (1 - 31)
+ │ └──────────────────── hour (0 - 23)
+ └───────────────────────── min (0 - 59)
+The nice drawing above is provided by wikipedia
+
+An other example:
+
+0 * * * * -this means the cron will run always when the minutes are 0 (so hourly)
+0 1 * * * - this means the cron will run always at 1 o'clock.
+* 1 * * * - this means the cron will run each minute when the hour is 1. So 1:00, 1:01, ...1:59.
