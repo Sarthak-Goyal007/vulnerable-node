@@ -4,8 +4,11 @@
 #     - '**/*.md'
 #     - '**/*.txt'
 # schedule: (schedule is used to triggered workflow on time mentioned in the cron. like below example triggers the workflow every day at 5:30 and 17:30 UTC: )
-# - cron:  '30 5,17 * * *' (for more - https://crontab.cronhub.io/)
-
+# - cron:  '30 5,17 * * *' (for more - https://crontab.cronhub.io/) (below cron represent time- 1:27 UTC and weekday is 5 i.e. Friday)
+# Jobs:  (Basically,  the template defines the steps that make up the build. the below value of jobs.analyze.runs-on is to specify the operating system for the machine that runs your code scanning actions.)
+# language: ['javascript-typescript', 'python'] (we let scan know that in which language our code is written)
+# Step: (A step represents one effect of the automation. A step could be defined as a GitHub Action, or another unit, like printing something to the console.)
+# Action : (uses: actions/checkout@v4) (An action is a piece of automation written in a way that is compatible with workflows.)
       
 name: "CodeQL"
 
