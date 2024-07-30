@@ -1,6 +1,6 @@
 # on: (CodeQL analysis workflow uses the on:push/pull event to trigger a code scan on every push/pull to the default branch of the repository.)
 # on:pull_request:paths-ignore/on:pull_request:paths (You might want to avoid a code scan being triggered on specific pull requests targeted against the default branch (If you want to avoid a code scan being triggered on specific pull requests targeted against the default branch.)
-# paths-ignore: (we can ignore file with this directive)
+# paths-ignore: (Avoiding unnecessary scans when files that are not relevant to the analysis are changed.)
 #     - '**/*.md'
 #     - '**/*.txt'
 # schedule: (schedule is used to triggered workflow on time mentioned in the cron. like below example triggers the workflow every day at 5:30 and 17:30 UTC: )
